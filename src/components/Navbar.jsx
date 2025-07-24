@@ -15,7 +15,6 @@ const Navbar = () => {
   const [nav, setNav] = useState(nav1);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Change theme every 1.5 seconds (demo)
   useEffect(() => {
     const interval = setInterval(() => {
       setStyle((prev) => (prev === style1 ? style2 : style1));
@@ -26,14 +25,14 @@ const Navbar = () => {
 
   return (
     <div className={style}>
-      {/* Left Logo / Title */}
+
       <div>
         <b className={`text-lg sm:text-xl md:text-2xl border-2 px-2 py-1 rounded-md ${nav}`}>
           DAILY BLOG
         </b>
       </div>
 
-      {/* Responsive Layout */}
+
       <div className="sm:hidden flex items-center gap-3">
         <p className={`text-[16px] font-semibold ${nav}`}>Hi.. Dharaneesh</p>
         <FontAwesomeIcon
@@ -43,7 +42,7 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Mobile Menu Slide Down */}
+
       {menuOpen && (
         <div
           className="absolute top-[70px] left-0 w-full px-4 py-6 bg-orange-500 text-white rounded-b-2xl shadow-lg z-40 transition-all duration-700 ease-in-out animate-slideDown"
@@ -55,7 +54,7 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Desktop Menu */}
+
       <div className="hidden sm:flex items-center gap-6">
         <ul className="flex font-bold text-[18px] gap-6">
           <li className="hover:text-orange-500 transition-colors duration-300">Home</li>
