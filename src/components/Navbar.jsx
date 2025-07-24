@@ -21,7 +21,7 @@ const Navbar = () => {
       setNav((prev) => (prev === nav1 ? nav2 : nav1));
     }, 1500);
     return () => clearInterval(interval);
-  }, []);
+  }, [style1, style2, nav1, nav2]);
 
   return (
     <div className={style}>
